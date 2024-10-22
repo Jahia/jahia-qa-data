@@ -1,14 +1,3 @@
-- addMavenRepository: "https://store.jahia.com/nexus/content/repositories/jahia-public-app-store@id=JahiaStore"
-- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/enterprise@id=jahia-enterprise@snapshots"
-  username: "NEXUS_USERNAME"
-  password: "NEXUS_PASSWORD"
-- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/internal@id=jahia-internal@snapshots"
-  username: "NEXUS_USERNAME"
-  password: "NEXUS_PASSWORD"
-- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/marketing-factory-group@id=marketing-factory-group@snapshots"
-  username: "NEXUS_USERNAME"
-  password: "NEXUS_PASSWORD"
-
 # Installation of the modules with a fixed version
 # Usually dependencies not directly related with jexperience
 # This section is divided in 3 blocks to make debugging easier

@@ -1,5 +1,3 @@
-
-- addMavenRepository: 'https://store.jahia.com/nexus/content/repositories/jahia-public-app-store@id=JahiaStore'
 - installBundle:
     - 'mvn:org.jahia.modules/skins/8.2.0'
     - 'mvn:org.jahia.modules/default-skins/8.2.0'

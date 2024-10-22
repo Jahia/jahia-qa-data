@@ -26,10 +26,6 @@
   - url: 'mvn:org.jahia.modules/jcontent/2.16.0'
   ignoreChecks: true 
 
-- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2732'
-  username: "NEXUS_USERNAME"
-  password: "NEXUS_PASSWORD"  
-
 - installBundle:
   - 'mvn:org.jahia.modules/distributed-sessions/4.1.0'
   autoStart: true
