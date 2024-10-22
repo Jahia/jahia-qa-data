@@ -1,0 +1,14 @@
+
+- addMavenRepository: 'https://store.jahia.com/nexus/content/repositories/jahia-public-app-store@id=JahiaStore'
+- installBundle:
+    - 'mvn:org.jahia.modules/job'
+    - 'mvn:org.jahia.modules/person/3.2.0'
+    - 'mvn:org.jahia.modules/news/3.4.0'
+    - 'mvn:org.jahia.modules/publication/3.0.0'
+    - 'mvn:org.jahia.modules/event/3.2.0'
+    - 'mvn:org.jahia.modules/calendar/3.2.0'
+    - 'mvn:org.jahia.modules/content-editor/4.11.0'
+    - 'mvn:org.jahia.modules/sitemap/5.3.1'
+    - 'mvn:org.jahia.modules/templates-web-blue'
+  autoStart: true
+  uninstallPreviousVersion: true
