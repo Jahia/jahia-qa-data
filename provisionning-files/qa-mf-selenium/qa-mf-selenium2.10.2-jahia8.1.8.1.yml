@@ -13,6 +13,22 @@
   autoStart: true
   uninstallPreviousVersion: true
 
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/enterprise@id=jahia-enterprise@snapshots"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/internal@id=jahia-internal@snapshots"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/marketing-factory-group@id=marketing-factory-group@snapshots"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/marketing-factory-group@id=marketing-factory-group@releases"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/marketing-factory-group@id=marketing-factory-group@releases"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
 # Installation of the modules that are actually testing
 - installBundle:
     - 'mvn:org.jahia.modules/server-availability-manager/2.7.0'
