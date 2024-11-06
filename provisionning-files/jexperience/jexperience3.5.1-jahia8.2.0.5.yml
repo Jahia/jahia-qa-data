@@ -42,7 +42,6 @@
   password: "NEXUS_PASSWORD"
 - installBundle:
       - 'mvn:org.jahia.modules/jexperience/3.5.1'
-      - 'mvn:org.jahia.modules/jexperience-data-generator/3.4.0'
       - 'mvn:org.jahia.test/jexperience-test-module/3.5.1'
   autoStart: true
   uninstallPreviousVersion: true
