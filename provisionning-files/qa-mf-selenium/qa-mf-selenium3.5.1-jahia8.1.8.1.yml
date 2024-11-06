@@ -1,14 +1,14 @@
 
 
 - addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_marketing_factory_staging_releases-1119"
-    username: "NEXUS_USERNAME"
-    password: "NEXUS_PASSWORD"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
 
 # Installation of the modules with a fixed version
 # Usually dependencies not directly related with jexperience
 # This section is divided in 3 blocks to make debugging easier
 - installBundle:
-  - 'mvn:org.jahia.modules/content-editor/4.5.0'
+  - 'mvn:org.jahia.modules/content-editor/4.11.0'
   - 'mvn:org.jahia.modules/font-awesome/6.1.5'
   - 'mvn:org.jahia.modules/bootstrap3-core/4.3.0'
   - 'mvn:org.jahia.modules/bootstrap3-components/4.3.0'
