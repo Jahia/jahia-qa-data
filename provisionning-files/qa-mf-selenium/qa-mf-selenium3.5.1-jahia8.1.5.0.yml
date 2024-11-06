@@ -18,7 +18,7 @@
   - 'mvn:org.jahia.modules/forms-core/3.13.0'
   - 'mvn:org.jahia.modules/remotepublish/9.10.0'
   - 'mvn:org.jahia.modules/event/3.2.0'
-  - 'mvn:org.jahia.modules/graphql-dxm-provider/2.19.1'
+  - 'mvn:org.jahia.modules/graphql-dxm-provider/2.21.0'
   autoStart: true
   uninstallPreviousVersion: true
 
@@ -42,8 +42,8 @@
 - installBundle:
     - 'mvn:org.jahia.modules/server-availability-manager/2.8.1'
     - 'mvn:org.jahia.modules/jexperience/3.5.1'
-    - 'mvn:org.jahia.modules/jexperience-forms-bridge'
-    - 'mvn:org.jahia.modules/jexperience-data-generator'
+    - 'mvn:org.jahia.modules/jexperience-forms-bridge/3.0.0'
+    - 'mvn:org.jahia.modules/jexperience-data-generator/3.0.0'
   autoStart: true
   uninstallPreviousVersion: true
 
