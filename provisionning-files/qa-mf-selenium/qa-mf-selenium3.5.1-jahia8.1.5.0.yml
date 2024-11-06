@@ -43,7 +43,6 @@
     - 'mvn:org.jahia.modules/server-availability-manager/2.8.1'
     - 'mvn:org.jahia.modules/jexperience/3.5.1'
     - 'mvn:org.jahia.modules/jexperience-forms-bridge/3.0.0'
-    - 'mvn:org.jahia.modules/jexperience-data-generator/3.0.0'
   autoStart: true
   uninstallPreviousVersion: true
 
