@@ -5,6 +5,7 @@
 
 - installBundle:
       - 'mvn:org.jahia.modules/press/3.0.0'
+      - 'mvn:org.jahia.modules/grid/8.1.0'
       - 'mvn:org.jahia.modules/skins/8.2.0'
       - 'mvn:org.jahia.modules/default-skins/8.2.0'
       - 'mvn:org.jahia.modules/person/3.1.0'
