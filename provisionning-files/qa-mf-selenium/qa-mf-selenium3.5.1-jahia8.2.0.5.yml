@@ -38,7 +38,7 @@
   username: "NEXUS_USERNAME"
   password: "NEXUS_PASSWORD"
 
-# Installation of the modules are are actually testing
+# Installation of the modules that are actually tested
 - installBundle:
     - 'mvn:org.jahia.modules/server-availability-manager/3.2.1'
     - 'mvn:org.jahia.modules/jexperience/3.5.1'
