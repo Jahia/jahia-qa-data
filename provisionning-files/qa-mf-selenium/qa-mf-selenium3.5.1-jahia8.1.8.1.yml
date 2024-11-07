@@ -1,0 +1,76 @@
+
+
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_marketing_factory_staging_releases-1119"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+# Installation of the modules with a fixed version
+# Usually dependencies not directly related with jexperience
+# This section is divided in 3 blocks to make debugging easier
+- installBundle:
+  - 'mvn:org.jahia.modules/content-editor/4.11.0'
+  - 'mvn:org.jahia.modules/font-awesome/6.1.5'
+  - 'mvn:org.jahia.modules/bootstrap3-core/4.3.0'
+  - 'mvn:org.jahia.modules/bootstrap3-components/4.3.0'
+  - 'mvn:org.jahia.modules/healthcheck/2.3.1'
+  - 'mvn:org.jahia.modules/database-connector/1.6.0'
+  - 'mvn:org.jahia.modules/bookmarks/3.1.0'
+  - 'mvn:org.jahia.modules/forms-core/3.13.0'
+  - 'mvn:org.jahia.modules/remotepublish/9.10.0'
+  - 'mvn:org.jahia.modules/event/3.2.0'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/enterprise@id=jahia-enterprise@snapshots"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/internal@id=jahia-internal@snapshots"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/marketing-factory-group@id=marketing-factory-group@snapshots"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/marketing-factory-group@id=marketing-factory-group@releases"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/marketing-factory-group@id=marketing-factory-group@releases"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+# Installation of the modules that are actually tested
+- installBundle:
+    - 'mvn:org.jahia.modules/server-availability-manager/2.8.1'
+    - 'mvn:org.jahia.modules/jexperience/3.5.1'
+    - 'mvn:org.jahia.modules/jexperience-forms-bridge'
+    - 'mvn:org.jahia.modules/jexperience-data-generator'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# Installation of the modules used for the tests
+- installBundle:
+  - 'mvn:org.jahia.modules/bootstrap3-test-templates-set'
+  - 'mvn:org.jahia.modules/df-tests-api'
+  - 'mvn:org.jahia.modules/jahiamfintegtests'
+  - 'mvn:org.jahia.modules/qa-module'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# Configure jExperience
+- editConfiguration: "org.jahia.modules.jexperience.settings"
+  configIdentifier: "global"
+  properties:
+    jexperience.jCustomerURL: "https://jcustomer.jahia.net:9443"
+    jexperience.jCustomerUsername: "karaf"
+    jexperience.jCustomerPassword: "karaf"
+    jexperience.jCustomerTrustAllCertificates: "true"
+    jexperience.jCustomerUsePublicAddressesForAdmin: "false"
+    jexperience.jCustomerKey: "670c26d1cc413346c3b2fd9ce65dab41"
+    jexperience.googleAPIKey: "AIzaSyAYo-IKsd6oF-0-2fRJrwP3H0qcNW5-Rh0"
+    jexperience.jCustomerCookieDomain: "localhost"
+    jexperience.jCustomerPublicURL: '$WEBAPP_CONTEXT/modules/jexperience/proxy/$CURRENT_SITE'
+
+
+- editConfiguration: "org.jahia.modules.jcontent"
+  properties:
+    hideLegacyPageComposer: "false"
+

@@ -1,0 +1,14 @@
+- installBundle:
+    - 'mvn:org.jahia.modules/skins/8.2.0'
+    - 'mvn:org.jahia.modules/default-skins/8.2.0'
+    - 'mvn:org.jahia.modules/job'
+    - 'mvn:org.jahia.modules/person/3.2.0'
+    - 'mvn:org.jahia.modules/grid/8.1.0'
+    - 'mvn:org.jahia.modules/news/3.4.0'
+    - 'mvn:org.jahia.modules/publication/3.0.0'
+    - 'mvn:org.jahia.modules/event/4.0.1'
+    - 'mvn:org.jahia.modules/calendar/3.2.0'
+    - 'mvn:org.jahia.modules/sitemap/5.3.1'
+    - 'mvn:org.jahia.modules/templates-web-blue'
+  autoStart: true
+  uninstallPreviousVersion: true

@@ -1,0 +1,4 @@
+- installBundle:
+  - 'mvn:org.jahia.modules/server-availability-manager/2.8.1'
+  autoStart: true
+  uninstallPreviousVersion: true

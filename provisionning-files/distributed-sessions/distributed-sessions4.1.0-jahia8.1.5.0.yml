@@ -1,0 +1,32 @@
+- installOrUpgradeBundle:
+  - url: 'mvn:org.jahia.modules/dx-base-demo-core/2.6.0'
+  - url: 'mvn:org.jahia.modules/contact/3.0.0'
+  - url: 'mvn:org.jahia.modules/content-editor/4.1.0'
+  - url: 'mvn:org.jahia.modules/dx-base-demo-components/2.4.0'
+  - url: 'mvn:org.jahia.modules/bookmarks/3.1.0'
+  - url: 'mvn:org.jahia.modules/socialsharing/3.0.0'
+  - url: 'mvn:org.jahia.modules/event/3.2.0'
+  - url: 'mvn:org.jahia.modules/press/3.1.0'
+  - url: 'mvn:org.jahia.modules/googleAnalytics/3.0.0'
+  - url: 'mvn:org.jahia.modules/person/3.2.0'
+  - url: 'mvn:org.jahia.modules/bootstrap3-components/4.3.0'
+  - url: 'mvn:org.jahia.modules/bootstrap3-core/4.3.0'
+  - url: 'mvn:org.jahia.modules/location/3.2.0'
+  - url: 'mvn:org.jahia.modules/news/3.4.0'
+  - url: 'mvn:org.jahia.modules/faq/3.0.0'
+  - url: 'mvn:org.jahia.modules/topstories'
+  - url: 'mvn:org.jahia.modules/font-awesome/6.1.5'
+  - url: 'mvn:org.jahia.modules/rating/3.2.0'
+  - url: 'mvn:org.jahia.modules/digitall/2.3.0'
+  - url: 'mvn:org.jahia.modules/dx-base-demo-templates/3.4.0'
+  - url: 'mvn:org.jahia.modules/article/3.0.0'
+  - url: 'mvn:org.jahia.modules/calendar/3.2.0'
+  - url: 'mvn:org.jahia.modules/server-availability-manager/2.7.0'
+  - url: 'mvn:org.jahia.modules/graphql-dxm-provider/2.19.1'
+  - url: 'mvn:org.jahia.modules/jcontent/2.16.0'
+  ignoreChecks: true 
+
+- installBundle:
+  - 'mvn:org.jahia.modules/distributed-sessions/4.1.0'
+  autoStart: true
+  uninstallPreviousVersion: true

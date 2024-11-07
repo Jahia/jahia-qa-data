@@ -1,0 +1,4 @@
+- installBundle:
+  - 'mvn:org.jahia.modules/database-connector/1.6.0'
+  autoStart: true
+  uninstallPreviousVersion: true
