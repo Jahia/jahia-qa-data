@@ -40,7 +40,7 @@
 
 # Installation of the modules are are actually testing
 - installBundle:
-    - 'mvn:org.jahia.modules/server-availability-manager/2.8.1'
+    - 'mvn:org.jahia.modules/server-availability-manager/2.7.0'
     - 'mvn:org.jahia.modules/jexperience/3.5.1'
     - 'mvn:org.jahia.modules/jexperience-forms-bridge/3.0.0'
   autoStart: true
