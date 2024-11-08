@@ -1,0 +1,14 @@
+- installOrUpgradeBundle:
+  - url: 'mvn:org.jahia.modules/server-availability-manager/3.2.1'
+  ignoreChecks: true 
+  autoStart: true
+  uninstallPreviousVersion: true
+
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2735'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"  
+
+- installBundle:
+  - 'mvn:org.jahia.modules/distributed-sessions/4.2.0'
+  autoStart: true
+  uninstallPreviousVersion: true
