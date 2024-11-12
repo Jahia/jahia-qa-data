@@ -3,7 +3,7 @@
   password: "NEXUS_PASSWORD"
 
 - installOrUpgradeBundle:
-  - url: 'mvn:org.jahia.modules/server-availability-manager/2.7.0'
+  - url: 'mvn:org.jahia.modules/server-availability-manager/2.8.1'
   ignoreChecks: true 
 
 - installBundle:
