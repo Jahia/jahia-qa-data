@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1736928137824
+Build-Jdk-Spec: 17
+Bundle-Category: jahia-module
+Bundle-Description: Jahia Commons Parent Project
+Bundle-DocURL: http://www.jahia.com
+Bundle-ManifestVersion: 2
+Bundle-Name: SUP-459
+Bundle-SymbolicName: sup459
+Bundle-Vendor: Jahia Solutions Group SA
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin 5.1.9
+Dynamic-ImportPackage: *
+Embed-Dependency: *; scope=compile|runtime|system; type=!pom; inline=fal
+ se
+Embed-Transitive: true
+Export-Package: org.jahia.support.sup459;uses:="org.jahia.services.sched
+ uler,org.quartz";version="1.0.0"
+Import-Package: org.quartz,org.springframework.scheduling.quartz;version
+ ="[3.2,4)",java.lang;resolution:=optional,org.jahia.services.scheduler,
+ org.quartz.utils,org.slf4j;version="[1.7,2)",org.apache.naming.java,org
+ .jahia.defaults.config.spring,org.jahia.exceptions,org.jahia.services
+Jahia-Depends: default
+Jahia-GroupId: org.jahia.support
+Jahia-Module-Type: module
+Jahia-Required-Version: 8.2.0.0
+Require-Capability: osgi.extender;filter:="(osgi.extender=org.jahia.bund
+ les.blueprint.extender.config)",osgi.ee;filter:="(&(osgi.ee=JavaSE)(ver
+ sion=11))"
+Tool: Bnd-6.3.1.202206071316
+

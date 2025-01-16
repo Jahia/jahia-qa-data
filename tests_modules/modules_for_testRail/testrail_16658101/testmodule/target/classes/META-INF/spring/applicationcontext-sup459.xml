@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean parent="jobSchedulingBean">
+        <property name="ramJob" value="false"/>
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.JobDetailBean" depends-on="settingsBean">
+                <property name="name" value="TestJob"/>
+                <property name="jobClass" value="org.jahia.support.sup459.TestJob"/>
+                <property name="group" value="Maintenance"/>
+                <property name="description" value="TestJob"/>
+                <property name="jobDataAsMap">
+                    <map>
+                        <entry key="foo" value="The Foo Value is BAR"/>
+                        <entry key="sleep" value="30000"/>
+                    </map>
+                </property>
+            </bean>
+        </property>
+        <property name="trigger">
+            <bean class="org.quartz.CronTrigger">
+                <property name="name" value="TestJobTrigger1"/>
+                <property name="cronExpression" value="${testjob.cron:0 0 0 L DEC ? 2090}"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean parent="jobSchedulingBean">
+        <property name="ramJob" value="false"/>
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.JobDetailBean" depends-on="settingsBean">
+                <property name="name" value="TestAnotherJob"/>
+                <property name="jobClass" value="org.jahia.support.sup459.TestAnotherJob"/>
+                <property name="group" value="Maintenance"/>
+                <property name="description" value="TestAnotherJob"/>
+                <property name="jobDataAsMap">
+                    <map>
+                        <entry key="foo" value="The Foo Value is ANOTHER"/>
+                        <entry key="sleep" value="15000"/>
+                    </map>
+                </property>
+            </bean>
+        </property>
+        <property name="trigger">
+            <bean class="org.quartz.CronTrigger">
+                <property name="name" value="TestAnotherJobTrigger"/>
+                <property name="cronExpression" value="${anotherjob.cron:0 0 0 L DEC ? 2092}"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean parent="jobSchedulingBean">
+        <property name="ramJob" value="false"/>
+        <property name="jobDetail">
+            <bean class="org.springframework.scheduling.quartz.JobDetailBean" depends-on="settingsBean">
+                <property name="name" value="TestSomeJob"/>
+                <property name="jobClass" value="org.jahia.support.sup459.TestSomeJob"/>
+                <property name="group" value="Maintenance"/>
+                <property name="description" value="TestSomeJob"/>
+                <property name="jobDataAsMap">
+                    <map>
+                        <entry key="foo" value="The Foo Value is SOME"/>
+                        <entry key="sleep" value="17000"/>
+                    </map>
+                </property>
+            </bean>
+        </property>
+        <property name="trigger">
+            <bean class="org.quartz.CronTrigger">
+                <property name="name" value="TestSomeJobTrigger"/>
+                <property name="cronExpression" value="${somejob.cron:0 0 0 L DEC ? 2093}"/>
+            </bean>
+        </property>
+    </bean>
+
+</beans>
