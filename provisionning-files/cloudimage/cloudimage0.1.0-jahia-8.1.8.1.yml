@@ -4,9 +4,9 @@
 - addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/enterprise@id=jahia-enterprise@releases"
   username: "NEXUS_USERNAME"
   password: "NEXUS_PASSWORD"
-- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/public/@snapshots@noreleases@id=JahiaPublicReleases"
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia-enterprise-customers-releases/"
 - installBundle:
     - 'mvn:org.jahia.modules/cloudimage/0.1.0'
-    - 'mvn:org.jahia.modules/cloudimage-test-module/0.1.0'
+    - 'mvn:org.jahia.test/cloudimage-test-module/0.1.0'
   autoStart: true
   uninstallPreviousVersion: true
