@@ -1,3 +1,5 @@
+# NOTE : some tests will fail on 8.2.0.6 because the tests will search for the new content type labels (only displayed on 8.2.0-SN)
+
 - addMavenRepository: 'https://store.jahia.com/nexus/content/repositories/jahia-public-app-store@id=JahiaStore'
   username: "NEXUS_USERNAME"
   password: "NEXUS_PASSWORD"
