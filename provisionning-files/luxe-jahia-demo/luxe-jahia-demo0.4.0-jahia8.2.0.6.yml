@@ -1,0 +1,13 @@
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2754'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2754'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- include: 'provisioning.yml'
+- installBundle:
+    - 'mvn:org.jahia.modules/javascript-modules-engine/0.3.0'
+    - 'npm:mvn:org.example.modules.npm/jahia-npm-module-example/1.0.0-SNAPSHOT/tgz'
+  autoStart: true
+  uninstallPreviousVersion: true
