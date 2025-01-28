@@ -3,6 +3,6 @@
   password: "NEXUS_PASSWORD"
 
 - installBundle:
-  - 'mvn:org.jahia.modules/server-availability-manager/3.0.0'
+  - 'mvn:org.jahia.modules/server-availability-manager/3.3.0'
   autoStart: true
   uninstallPreviousVersion: true
