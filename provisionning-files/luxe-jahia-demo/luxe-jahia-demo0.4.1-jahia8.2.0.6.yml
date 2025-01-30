@@ -10,7 +10,7 @@
 - installBundle:
     - 'mvn:org.jahia.modules/graphql-dxm-provider/3.2.0'
     - 'mvn:org.jahia.modules/jahia-ui-root/1.10.0'
-    - 'mvn:org.jahia.modules/jcontent/3.2.0-SNAPSHOT'
+    - 'mvn:org.jahia.modules/site-settings-seo/5.3.0'
     - 'mvn:org.jahia.modules/event/4.0.1'
     - 'mvn:org.jahia.modules/calendar/3.2.0'
   autoStart: true
