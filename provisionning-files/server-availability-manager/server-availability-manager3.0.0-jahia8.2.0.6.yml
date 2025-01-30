@@ -1,8 +1,11 @@
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/public/@snapshots@noreleases@id=JahiaPublicSnapshots'
+
 - addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2766"
   username: "NEXUS_USERNAME"
   password: "NEXUS_PASSWORD"
 
 - installBundle:
-  - 'mvn:org.jahia.modules/server-availability-manager/3.3.0'
+    - 'mvn:org.jahia.modules/server-availability-manager/3.3.0'
+    - 'mvn:org.jahia.test/server-availability-manager-test-module/3.3.0'
   autoStart: true
   uninstallPreviousVersion: true
