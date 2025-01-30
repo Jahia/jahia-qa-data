@@ -20,5 +20,6 @@
   autoStart: true
 
 - installBundle:
-    - 'npm:mvn:org.example.modules.npm/jahia-npm-module-example/1.0.0-SNAPSHOT/tgz'
+    - 'npm:mvn:org.jahia.modules.npm/luxe-jahia-demo/0.4.1/tgz'
   autoStart: true
+  uninstallPreviousVersion: true
