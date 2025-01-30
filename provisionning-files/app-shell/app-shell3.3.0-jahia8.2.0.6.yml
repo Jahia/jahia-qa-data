@@ -1,0 +1,9 @@
+# replace URL by staging repository on Nexus
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2765'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- installBundle:
+    - 'mvn:org.jahia.modules/app-shell/3.3.0'
+  autoStart: true
+  uninstallPreviousVersion: true
