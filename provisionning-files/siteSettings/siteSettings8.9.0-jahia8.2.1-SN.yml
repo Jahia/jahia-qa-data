@@ -1,0 +1,31 @@
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/internal@id=jahia-internal@releases'
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/internal@id=jahia-internal@snapshots'
+  username: ${env:NEXUS_USERNAME}
+  password: ${env:NEXUS_PASSWORD}
+
+
+- installBundle:
+    - 'mvn:org.jahia.modules/legacy-default-components'
+    - 'mvn:org.jahia.modules/press'
+    - 'mvn:org.jahia.modules/person'
+    - 'mvn:org.jahia.modules/news'
+    - 'mvn:org.jahia.modules/font-awesome'
+    - 'mvn:org.jahia.modules/calendar'
+    - 'mvn:org.jahia.modules/bootstrap3-core'
+    - 'mvn:org.jahia.modules/bootstrap3-components'
+    - 'mvn:org.jahia.modules/location'
+    - 'mvn:org.jahia.modules/topstories'
+    - 'mvn:org.jahia.modules/rating'
+    - 'mvn:org.jahia.modules/event'
+    - 'mvn:org.jahia.modules/bookmarks'
+    - 'mvn:org.jahia.modules/dx-base-demo-core'
+    - 'mvn:org.jahia.modules/dx-base-demo-templates'
+    - 'mvn:org.jahia.modules/dx-base-demo-components'
+    - 'mvn:org.jahia.modules/digitall'
+    - 'mvn:org.jahia.modules/skins'
+    - 'mvn:org.jahia.modules/default-skins'
+    - 'mvn:org.jahia.modules/grid'
+    - 'mvn:org.jahia.modules/tabularList'
+    - 'mvn:org.jahia.modules/siteSettings/8.9.0'
+  autoStart: true
+  uninstallPreviousVersion: true
