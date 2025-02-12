@@ -1,0 +1,47 @@
+- addMavenRepository: 'https://store.jahia.com/nexus/content/repositories/jahia-public-app-store@id=JahiaStore'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/public/@snapshots@noreleases@id=JahiaSnapshot'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+# replace URL by staging repository on Nexus
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2779"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+# This modules were added during the switch from using jahia-discovery to jahia-ee
+- installBundle:
+    - 'mvn:org.jahia.modules/legacy-default-components/1.0.0'
+    - 'mvn:org.jahia.modules/press/3.1.0'
+    - 'mvn:org.jahia.modules/person/3.2.0'
+    - 'mvn:org.jahia.modules/news/3.4.0'
+    - 'mvn:org.jahia.modules/font-awesome/6.1.5'
+    - 'mvn:org.jahia.modules/calendar/3.2.0'
+    - 'mvn:org.jahia.modules/bootstrap3-core/4.3.0'
+    - 'mvn:org.jahia.modules/bootstrap3-components/4.3.0'
+    - 'mvn:org.jahia.modules/location/3.2.0'
+    - 'mvn:org.jahia.modules/topstories/3.0.0'
+    - 'mvn:org.jahia.modules/rating/3.2.0'
+    - 'mvn:org.jahia.modules/event/4.0.1'
+    - 'mvn:org.jahia.modules/bookmarks/3.1.0'
+    - 'mvn:org.jahia.modules/dx-base-demo-core/2.6.0'
+    - 'mvn:org.jahia.modules/dx-base-demo-templates/4.0.0'
+    - 'mvn:org.jahia.modules/dx-base-demo-components/3.0.0'
+    - 'mvn:org.jahia.modules/digitall/3.0.0'
+    - 'mvn:org.jahia.modules/skins'
+    - 'mvn:org.jahia.modules/default-skins'
+    - 'mvn:org.jahia.modules/grid'
+    - 'mvn:org.jahia.modules/tabularList'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+- import: "jar:mvn:org.jahia.modules/digitall/3.0.0/zip/import!/users.zip"
+- importSite: "jar:mvn:org.jahia.modules/digitall/3.0.0/zip/import!/Digitall.zip"
+
+- installBundle:
+    - 'mvn:org.jahia.modules/graphql-dxm-provider/3.4.0'
+    - 'mvn:org.jahia.modules/graphql-extension-example/3.4.0'
+  autoStart: true
+  uninstallPreviousVersion: true
