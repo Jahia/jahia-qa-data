@@ -35,7 +35,7 @@
 - importSite: "jar:mvn:org.jahia.modules/digitall/3.0.0/zip/import!/Digitall.zip"
 
 - installBundle:
-  - 'mvn:org.jahia.test/jahia-test-module/4.8.0'
+  - 'mvn:org.jahia.test/jahia-test-module/8.2.0.7'
   - 'mvn:org.jahia.modules/external-provider/4.8.0'
   - 'mvn:org.jahia.modules/external-provider-ui/4.8.0'
   - 'mvn:org.jahia.modules/external-provider-vfs/4.8.0'
