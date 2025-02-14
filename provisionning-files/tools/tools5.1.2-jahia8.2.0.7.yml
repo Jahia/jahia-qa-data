@@ -1,0 +1,17 @@
+
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/public/@snapshots@noreleases@id=JahiaPublicSnapshots'
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/internal@id=jahia-internal@snapshots'
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/enterprise@id=jahia-enterprise@snapshots"
+  username: ${env:NEXUS_USERNAME}
+  password: ${env:NEXUS_PASSWORD}
+
+# replace URL by staging repository on Nexus
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2782"
+  username: ${env:NEXUS_USERNAME}
+  password: ${env:NEXUS_PASSWORD}
+
+- installBundle:
+    - 'mvn:org.jahia.test/tools-test-module/5.1.2'
+    - 'mvn:org.jahia.modules/tools/5.1.2'
+  autoStart: true
+  uninstallPreviousVersion: true

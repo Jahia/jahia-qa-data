@@ -1,0 +1,44 @@
+- addMavenRepository: 'https://store.jahia.com/nexus/content/repositories/jahia-public-app-store@id=JahiaStore'
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/public/@snapshots@noreleases@id=JahiaSnapshot'
+# replace URL by staging repository on Nexus
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2786"
+  username: ${env:NEXUS_USERNAME}
+  password: ${env:NEXUS_PASSWORD}
+
+
+- installBundle:
+    # page-composer-2.0.0 has a dependency to jcontent-3.2.0 which has a dependency to graphql and jahia-ui-root
+    - 'mvn:org.jahia.modules/jcontent/3.2.0'
+    - 'mvn:org.jahia.modules/graphql-dxm-provider/3.4.0'
+    - 'mvn:org.jahia.modules/jahia-ui-root/1.10.0'
+    - 'mvn:org.jahia.modules/legacy-default-components'
+    - 'mvn:org.jahia.modules/press'
+    - 'mvn:org.jahia.modules/person'
+    - 'mvn:org.jahia.modules/news'
+    - 'mvn:org.jahia.modules/font-awesome'
+    - 'mvn:org.jahia.modules/calendar'
+    - 'mvn:org.jahia.modules/bootstrap3-core'
+    - 'mvn:org.jahia.modules/bootstrap3-components'
+    - 'mvn:org.jahia.modules/location'
+    - 'mvn:org.jahia.modules/topstories'
+    - 'mvn:org.jahia.modules/rating'
+    - 'mvn:org.jahia.modules/event'
+    - 'mvn:org.jahia.modules/bookmarks'
+    - 'mvn:org.jahia.modules/dx-base-demo-core'
+    - 'mvn:org.jahia.modules/dx-base-demo-templates'
+    - 'mvn:org.jahia.modules/dx-base-demo-components'
+    - 'mvn:org.jahia.modules/digitall/3.0.0'
+    - 'mvn:org.jahia.modules/skins'
+    - 'mvn:org.jahia.modules/default-skins'
+    - 'mvn:org.jahia.modules/grid'
+    - 'mvn:org.jahia.modules/tabularList'
+    - 'mvn:org.jahia.modules/jahia-page-composer/2.0.0'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+- import: "jar:mvn:org.jahia.modules/digitall/3.0.0/zip/import!/users.zip"
+- importSite: "jar:mvn:org.jahia.modules/digitall/3.0.0/zip/import!/Digitall.zip"
+
+- editConfiguration: "org.jahia.modules.jcontent"
+  properties:
+    hideLegacyPageComposer: "false"
