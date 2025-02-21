@@ -1,0 +1,39 @@
+- addMavenRepository: 'https://store.jahia.com/nexus/content/repositories/jahia-public-app-store@id=JahiaStore'
+
+# This modules were added during the switch from using jahia-discovery to jahia-ee
+- installBundle:
+    - 'mvn:org.jahia.modules/legacy-default-components/1.0.0'
+    - 'mvn:org.jahia.modules/press/3.1.0'
+    - 'mvn:org.jahia.modules/person/3.2.0'
+    - 'mvn:org.jahia.modules/news/3.4.0'
+    - 'mvn:org.jahia.modules/font-awesome/6.1.5'
+    - 'mvn:org.jahia.modules/calendar/3.2.0'
+    - 'mvn:org.jahia.modules/bootstrap3-core'
+    - 'mvn:org.jahia.modules/bootstrap3-components'
+    - 'mvn:org.jahia.modules/location/3.2.0'
+    - 'mvn:org.jahia.modules/topstories/3.0.0'
+    - 'mvn:org.jahia.modules/rating/3.3.0'
+    - 'mvn:org.jahia.modules/event4.0.1'
+    - 'mvn:org.jahia.modules/bookmarks/3.1.0'
+    - 'mvn:org.jahia.modules/dx-base-demo-core/2.6.0'
+    - 'mvn:org.jahia.modules/dx-base-demo-templates/4.0.0'
+    - 'mvn:org.jahia.modules/dx-base-demo-components/3.0.0'
+    - 'mvn:org.jahia.modules/skins/8.2.0'
+    - 'mvn:org.jahia.modules/default-skins/8.2.0'
+    - 'mvn:org.jahia.modules/grid/8.1.0'
+    - 'mvn:org.jahia.modules/tabularList/8.2.0'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# uninstall only if it exists, otherwise it throws an error
+# need to hardcode version for uninstall
+- if: org.jahia.osgi.BundleUtils.getBundleBySymbolicName('content-editor',null) != null
+  do:
+    - uninstallBundle: 'mvn:org.jahia.modules/content-editor/3.6.0'
+
+- installBundle:
+    - 'mvn:org.jahia.modules/jcontent/3.2.0'
+    - 'mvn:org.jahia.modules/site-settings-seo/5.4.0'
+    - 'mvn:org.jahia.modules/copy-to-other-languages/3.1.1'
+  autoStart: true
+  uninstallPreviousVersion: true
