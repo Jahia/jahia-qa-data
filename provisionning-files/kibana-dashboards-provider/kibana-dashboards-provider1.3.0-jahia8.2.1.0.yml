@@ -22,7 +22,7 @@
     - 'mvn:org.jahia.modules/event/4.0.1'
     - 'mvn:org.jahia.modules/bookmarks/3.1.0'
     - 'mvn:org.jahia.modules/dx-base-demo-core/2.6.0'
-    - 'mvn:org.jahia.modules/dx-base-demo-templates/4.0.'
+    - 'mvn:org.jahia.modules/dx-base-demo-templates/4.0.0'
     - 'mvn:org.jahia.modules/dx-base-demo-components/3.0.0'
     - 'mvn:org.jahia.modules/skins/8.2.0'
     - 'mvn:org.jahia.modules/default-skins/8.2.0'
