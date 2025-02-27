@@ -1,0 +1,26 @@
+# uninstall only if it exists, otherwise it throws an error
+# need to hardcode version for uninstall
+- if: org.jahia.osgi.BundleUtils.getBundleBySymbolicName('content-editor',null) != null
+  do:
+    - uninstallBundle: 'mvn:org.jahia.modules/content-editor/3.6.0'
+
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/public/@snapshots@noreleases@id=JahiaPublicSnapshots'
+  username: ${env:NEXUS_USERNAME}
+  password: ${env:NEXUS_PASSWORD}
+
+# replace URL by staging repository on Nexus
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2792'
+  username: ${env:NEXUS_USERNAME}
+  password: ${env:NEXUS_PASSWORD}
+
+- installBundle:
+    - 'mvn:org.jahia.modules/jahia-page-composer/2.0.0'
+    - 'mvn:org.jahia.modules/jahia-administration/1.11.0'
+    - 'mvn:org.jahia.modules/graphql-dxm-provider/3.4.0'
+    - 'mvn:org.jahia.modules/jahia-ui-root/1.10.0'
+    - 'mvn:org.jahia.modules/jcontent/3.2.1'
+    - 'mvn:org.jahia.test/jcontent-test-module'
+    - 'mvn:org.jahia.test/jcontent-test-template'
+  autoStart: true
+  uninstallPreviousVersion: true
+- include: 'provisioning.yml'
