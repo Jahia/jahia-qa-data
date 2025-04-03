@@ -1,0 +1,21 @@
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2805'
+  username: NEXUS_USERNAME
+  password: NEXUS_PASSWORD
+
+
+- installBundle:
+      - 'mvn:org.jahia.modules/legacy-default-components/1.0.0'
+      - 'mvn:org.jahia.modules/calendar/3.2.0'
+      - 'mvn:org.jahia.modules/event/4.0.1'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+- installBundle:
+      - 'mvn:org.jahia.modules/javascript-modules-engine/0.6.0'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+- installBundle:
+      - 'js:mvn:org.jahia.test/javascript-modules-engine-test-module/0.6.0/tgz'
+  autoStart: true
+  uninstallPreviousVersion: true
