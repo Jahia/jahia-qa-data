@@ -5,13 +5,13 @@
     - uninstallBundle: 'mvn:org.jahia.modules/content-editor/3.6.0'
 
 - addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/public/@snapshots@noreleases@id=JahiaPublicSnapshots'
-  username: ${env:NEXUS_USERNAME}
-  password: ${env:NEXUS_PASSWORD}
+  username: NEXUS_USERNAME
+  password: NEXUS_PASSWORD
 
 # replace URL by staging repository on Nexus
 - addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2792'
-  username: ${env:NEXUS_USERNAME}
-  password: ${env:NEXUS_PASSWORD}
+  username: NEXUS_USERNAME
+  password: NEXUS_PASSWORD
 
 - installBundle:
     - 'mvn:org.jahia.modules/jahia-page-composer/2.0.0'
