@@ -41,7 +41,7 @@
 # Installation of the modules that are actually tested
 - installBundle:
     - 'mvn:org.jahia.modules/server-availability-manager/2.7.0'
-    - 'mvn:org.jahia.modules/jexperience/3.6.o'
+    - 'mvn:org.jahia.modules/jexperience/3.6.1'
     - 'mvn:org.jahia.modules/jexperience-forms-bridge/3.0.0'
   autoStart: true
   uninstallPreviousVersion: true
