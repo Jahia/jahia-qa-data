@@ -9,16 +9,20 @@
 # This section is divided in 3 blocks to make debugging easier
 - installBundle:
   - 'mvn:org.jahia.modules/content-editor/4.11.0'
+  - 'mvn:org.jahia.modules/jcontent/2.18.0'
+  - 'mvn:org.jahia.modules/jahia-ui-root/1.10.0'
   - 'mvn:org.jahia.modules/font-awesome/6.1.5'
   - 'mvn:org.jahia.modules/bootstrap3-core/4.3.0'
   - 'mvn:org.jahia.modules/bootstrap3-components/4.3.0'
   - 'mvn:org.jahia.modules/healthcheck/2.3.1'
   - 'mvn:org.jahia.modules/database-connector/1.6.0'
   - 'mvn:org.jahia.modules/bookmarks/3.1.0'
-  - 'mvn:org.jahia.modules/forms-core/3.13.0'
+  - 'mvn:org.jahia.modules/forms-core/3.15.0'
   - 'mvn:org.jahia.modules/remotepublish/9.10.0'
   - 'mvn:org.jahia.modules/event/3.2.0'
   - 'mvn:org.jahia.modules/graphql-dxm-provider/2.21.0'
+  - 'mvn:org.jahia.modules/app-shell/2.10.0'
+  - 'mvn:org.jahia.modules/sdl-generator-tools/2.4.0'
   autoStart: true
   uninstallPreviousVersion: true
 
