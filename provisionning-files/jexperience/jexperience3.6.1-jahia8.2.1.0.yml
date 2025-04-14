@@ -47,5 +47,6 @@
 - installBundle:
     - 'mvn:org.jahia.modules/jexperience/3.6.1'
     - 'mvn:org.jahia.test/jexperience-test-module/3.6.1'
+    -  'mvn:org.jahia.test/jexperience-test-template/3.6.1'
   autoStart: true
   uninstallPreviousVersion: true
