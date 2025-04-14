@@ -20,6 +20,7 @@
     - 'mvn:org.jahia.modules/dx-base-demo-templates/4.0.0'
     - 'mvn:org.jahia.modules/dx-base-demo-components/3.0.0'
     - 'mvn:org.jahia.modules/digitall/3.0.0'
+    - 'mvn:org.jahia.modules/jcontent/3.3.1'
     - 'mvn:org.jahia.modules/server-availability-manager/3.3.0'
   autoStart: true
   uninstallPreviousVersion: true
