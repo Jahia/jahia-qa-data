@@ -22,6 +22,8 @@
     - 'mvn:org.jahia.modules/content-editor/4.11.0'
     - 'mvn:org.jahia.modules/jahia-ui-root/1.10.0'
     - 'mvn:org.jahia.modules/jcontent/2.18.0'
+    - 'mvn:org.jahia.modules/jahia-csrf-guard/3.4.0'
+    - 'mvn:org.jahia.modules/jahia-page-composer/1.12.0'
     - 'mvn:org.jahia.modules/font-awesome/6.1.5'
     - 'mvn:org.jahia.modules/bootstrap3-core/4.3.0'
     - 'mvn:org.jahia.modules/bootstrap3-components/4.3.0'
@@ -43,17 +45,17 @@
 - installBundle:
     - 'mvn:org.jahia.modules/server-availability-manager/2.7.0'
     - 'mvn:org.jahia.modules/jexperience/3.6.2'
-    - 'mvn:org.jahia.modules/jexperience-forms-bridge'
-    - 'mvn:org.jahia.modules/jexperience-data-generator'
+    - 'mvn:org.jahia.modules/jexperience-forms-bridge/3.1.0-SNAPSHOT'
+    - 'mvn:org.jahia.modules/jexperience-data-generator/3.5.0-SNAPSHOT'
   autoStart: true
   uninstallPreviousVersion: true
 
 # Installation of the modules used for the tests
 - installBundle:
-    - 'mvn:org.jahia.modules/bootstrap3-test-templates-set'
-    - 'mvn:org.jahia.modules/df-tests-api'
-    - 'mvn:org.jahia.modules/jahiamfintegtests'
-    - 'mvn:org.jahia.modules/qa-module'
+    - 'mvn:org.jahia.modules/bootstrap3-test-templates-set/2.0.0-SNAPSHOT'
+    - 'mvn:org.jahia.modules/df-tests-api/2.0.0-SNAPSHOT'
+    - 'mvn:org.jahia.modules/jahiamfintegtests/3.2.0-SNAPSHOT'
+    - 'mvn:org.jahia.modules/qa-module/3.2.0-SNAPSHOT'
   autoStart: true
   uninstallPreviousVersion: true
 
