@@ -1,0 +1,26 @@
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/public/@snapshots@noreleases@id=JahiaPublicSnapshots'
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2754'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+
+- uninstallBundle:
+    - 'npm-modules-engine'
+
+- installBundle:
+    - 'mvn:org.jahia.modules/graphql-dxm-provider/3.2.0'
+    - 'mvn:org.jahia.modules/jahia-ui-root/1.10.0'
+    - 'mvn:org.jahia.modules/jcontent/3.2.0-SNAPSHOT'
+    - 'mvn:org.jahia.modules/site-settings-seo/5.3.0'
+    - 'mvn:org.jahia.modules/event/4.0.1'
+    - 'mvn:org.jahia.modules/calendar/3.2.0'
+  autoStart: true
+
+- installBundle:
+    - 'mvn:org.jahia.modules/javascript-modules-engine/0.3.0'
+  autoStart: true
+
+- installBundle:
+    - 'npm:mvn:org.jahia.modules.npm/luxe-jahia-demo/0.4.1/tgz'
+  autoStart: true
+  uninstallPreviousVersion: true
