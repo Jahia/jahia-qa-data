@@ -1,0 +1,31 @@
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia-snapshots'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+# javascript modules engine under the test (SNAPSHOT is used, since this module is not yet released)
+# see Release Ticket https://github.com/Jahia/javascript-modules/issues/302
+- installBundle:
+    - 'mvn:org.jahia.modules/javascript-modules-engine/0.7.0-SNAPSHOT'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# new javascript modules engine's test module and hydrogen sample, used for cypress tests
+# these are automatically published to Nexus on every commit
+# see https://github.com/Jahia/javascript-modules/issues/247#issuecomment-2812678580
+- installBundle:
+    - 'js:mvn:org.jahia.test/javascript-modules-engine-test-module/0.7.0-SNAPSHOT/tgz'
+    - 'js:mvn:org.jahia.samples/javascript-modules-samples-hydrogen/0.7.0-SNAPSHOT/tgz'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# jahia 8.2.1.0 is shipped with jcontent 3.2
+# upgrade jcontent to the next release version (3.3.1 at the moment) to avoid any issues
+# and install other dependencies
+- installBundle:
+    - 'mvn:org.jahia.modules/jcontent/3.3.1'
+    - 'mvn:org.jahia.samples/simple-osgi-service/0.7.0-SNAPSHOT'
+    - 'mvn:org.jahia.modules/legacy-default-components/1.0.0'
+    - 'mvn:org.jahia.modules/calendar/3.2.0'
+    - 'mvn:org.jahia.modules/event/4.0.1'
+  autoStart: true
+  uninstallPreviousVersion: true
