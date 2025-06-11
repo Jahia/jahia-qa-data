@@ -1,0 +1,10 @@
+# Can be used with Jahia starting from 8.1.8.3
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2835'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- installBundle:
+    - 'mvn:org.jahia.modules/html-filtering/2.0.0'
+    - 'mvn:org.jahia.test/html-filtering-test-module/2.0.0'
+  autoStart: true
+  uninstallPreviousVersion: true
