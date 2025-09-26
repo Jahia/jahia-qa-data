@@ -1,6 +1,6 @@
 - addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/public/@snapshots@noreleases@id=JahiaPublicSnapshots'
 # replace URL by staging repository on Nexus
-- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2864'
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2882'
   username: NEXUS_USERNAME
   password: NEXUS_PASSWORD
 - installBundle:
@@ -25,9 +25,9 @@
     - 'mvn:org.jahia.modules/digitall/2.3.0'
     - 'mvn:org.jahia.modules/skins'
     - 'mvn:org.jahia.modules/default-skins'
-    - 'mvn:org.jahia.modules/richtext-ckeditor5/1.0.0'
-# /!\ richtext-ckeditor5-1.0.0 depends on jcontent-3.4.0
-    - 'mvn:org.jahia.modules/jcontent'
+    - 'mvn:org.jahia.modules/richtext-ckeditor5/1.0.0-beta-1'
+# /!\ richtext-ckeditor5-1.0.0 depends on jcontent-3.4.1
+    - 'mvn:org.jahia.modules/jcontent/3.4.1'
     - 'mvn:org.jahia.test/test-ckeditor5-config'
   autoStart: true
   uninstallPreviousVersion: true
