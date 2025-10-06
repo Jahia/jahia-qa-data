@@ -1,0 +1,23 @@
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/internal/@id=jahia-internal@releases'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2884'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- installBundle:
+    - 'mvn:org.jahia.modules/graphql-dxm-provider/3.4.0'
+    - 'mvn:org.jahia.modules/jahia-ui-root/1.10.0'
+    - 'mvn:org.jahia.modules/jcontent/3.4.1'
+  autoStart: true
+
+- installBundle:
+    - 'mvn:org.jahia.modules/javascript-modules-engine/1.0.0'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+- installBundle:
+    - 'js:mvn:org.jahia.modules.javascript/luxe-jahia-demo/1.0.0/tgz'
+  autoStart: true
+  uninstallPreviousVersion: true
