@@ -1,0 +1,17 @@
+# Install and start bundles for Augmented Search
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/enterprise/@id=jahia-enterprise@snapshots"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/internal/@id=jahia-internal"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/augmented_search_staging_releases-1093/'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- installOrUpgradeBundle:
+  - 'mvn:org.jahia.modules/augmented-search/3.7.1'
+  autoStart: true
+  uninstallPreviousVersion: false
