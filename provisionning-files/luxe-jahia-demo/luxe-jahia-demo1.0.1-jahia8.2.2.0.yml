@@ -1,0 +1,28 @@
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/public/@id=jahia-snapshots@snaphots'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/enterprise/@id=jahia-enterprise@snapshots"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/internal/@id=jahia-internal@snapshots"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2893/@id=stagingReleases'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+# INSTALL JSM FIRST AS LUXE DEPENDS ON IT
+- installBundle:
+    - 'mvn:org.jahia.modules/javascript-modules-engine/1.0.1'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# INSTALL LUXE AND DEMO SITE
+- installBundle:
+    - 'js:mvn:org.jahia.modules.javascript/luxe-jahia-demo/1.0.1/tgz'
+    - 'mvn:org.jahia.modules/luxe-prepackaged-website/1.0.1'
+  autoStart: true
+  uninstallPreviousVersion: true
