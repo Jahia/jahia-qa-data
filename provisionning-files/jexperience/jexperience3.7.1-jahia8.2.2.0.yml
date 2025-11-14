@@ -38,13 +38,13 @@
   username: "NEXUS_USERNAME"
   password: "NEXUS_PASSWORD"
 
-- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_marketing_factory_staging_releases-1126"
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_marketing_factory_staging_releases-1128"
   username: "NEXUS_USERNAME"
   password: "NEXUS_PASSWORD"
 
 - installBundle:
-    - 'mvn:org.jahia.modules/jexperience/3.7.0'
-    - 'mvn:org.jahia.test/jexperience-test-module/3.7.0'
-    -  'mvn:org.jahia.test/jexperience-test-template/3.7.0'
+    - 'mvn:org.jahia.modules/jexperience/3.7.1'
+    - 'mvn:org.jahia.test/jexperience-test-module/3.7.1'
+    -  'mvn:org.jahia.test/jexperience-test-template/3.7.1'
   autoStart: true
   uninstallPreviousVersion: true
