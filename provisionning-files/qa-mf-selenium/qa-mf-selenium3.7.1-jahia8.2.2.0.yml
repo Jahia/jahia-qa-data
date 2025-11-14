@@ -1,6 +1,6 @@
 
 
-- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_marketing_factory_staging_releases-1126"
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_marketing_factory_staging_releases-1128"
   username: "NEXUS_USERNAME"
   password: "NEXUS_PASSWORD"
 
