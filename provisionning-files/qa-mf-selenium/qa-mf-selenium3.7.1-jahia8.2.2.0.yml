@@ -12,7 +12,7 @@
     - 'mvn:org.jahia.modules/bootstrap3-core/4.3.0'
     - 'mvn:org.jahia.modules/bootstrap3-components/4.3.0'
     - 'mvn:org.jahia.modules/healthcheck/2.3.1'
-    - 'mvn:org.jahia.modules/database-connector/1.7.0'
+    - 'mvn:org.jahia.modules/database-connector/1.6.0'
     - 'mvn:org.jahia.modules/bookmarks/3.1.0'
     - 'mvn:org.jahia.modules/forms-core/3.16.0'
     - 'mvn:org.jahia.modules/remotepublish/10.2.0'
