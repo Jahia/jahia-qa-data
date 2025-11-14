@@ -69,6 +69,7 @@
     jexperience.googleAPIKey: "AIzaSyAYo-IKsd6oF-0-2fRJrwP3H0qcNW5-Rh0"
     jexperience.jCustomerCookieDomain: "localhost"
     jexperience.jCustomerPublicURL: '$WEBAPP_CONTEXT/modules/jexperience/proxy/$CURRENT_SITE'
+    jexperience.waitForProfileMergeOnLogin: 'true'
 
 - editConfiguration: "org.jahia.modules.jcontent"
   properties:
