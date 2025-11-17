@@ -1,0 +1,73 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1735576227556
+Build-Jdk: 22.0.1
+Built-By: ksagnard
+Bundle-Category: jahia-module
+Bundle-Description: This is the custom profile module (template_test_clo
+ udimage) for running on a Jahia server.
+Bundle-DocURL: http://www.jahia.com
+Bundle-ManifestVersion: 2
+Bundle-Name: template_test_cloudimage
+Bundle-SymbolicName: template_test_cloudimage
+Bundle-Vendor: Jahia Solutions Group SA
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Dynamic-ImportPackage: *
+Git-branch: main
+Git-commit-desc: Merge pull request #3 from Jahia/BACKLOG-23359_CEreleas
+ eBACKLOG-23359: add provisioning for CE
+Git-last-commit-id: 39ca17c9dc333ec38484a11b61f4b0b2d6e6c1e7
+Git-last-commit-time: 2024-11-15T16:53:00+0100
+Implementation-Title: template_test_cloudimage
+Implementation-URL: http://www.jahia.com
+Implementation-Vendor: Jahia Solutions Group SA
+Implementation-Version: 1.0.0-SNAPSHOT
+Import-Package: javax.jcr;version="[2.0,3)",org.apache.naming.java,org.a
+ pache.taglibs.standard.functions;version="[1.2,2)",org.apache.taglibs.s
+ tandard.tag.common.core;version="[1.2,2)",org.apache.taglibs.standard.t
+ ag.rt.core;version="[1.2,2)",org.apache.taglibs.standard.tei;version="[
+ 1.2,2)",org.jahia.defaults.config.spring,org.jahia.exceptions,org.jahia
+ .services,org.jahia.services.content,org.jahia.services.content.decorat
+ or,org.jahia.services.content.nodetypes,org.jahia.services.render,org.j
+ ahia.services.render.scripting,org.jahia.taglibs;version="[8.1,9)",org.
+ jahia.taglibs.jcr;version="[8.1,9)",org.jahia.taglibs.jcr.node;version=
+ "[8.1,9)",org.jahia.taglibs.jcr.query;version="[8.1,9)",org.jahia.tagli
+ bs.query;version="[8.1,9)",org.jahia.taglibs.template;version="[8.1,9)"
+ ,org.jahia.taglibs.template.gwt;version="[8.1,9)",org.jahia.taglibs.tem
+ plate.include;version="[8.1,9)",org.jahia.taglibs.template.layoutmanage
+ r;version="[8.1,9)",org.jahia.taglibs.template.pager;version="[8.1,9)",
+ org.jahia.taglibs.user;version="[8.1,9)"
+Jahia-Depends: default
+Jahia-Download-Sources-Available: true
+Jahia-GroupId: org.foo.modules
+Jahia-Module-Type: templatesSet
+Jahia-Required-Version: 8.1.8.1
+Jahia-Source-Control-Connection: scm:dummy:uri
+Jahia-Source-Control-DeveloperConnection: scm:dummy:uri
+Jahia-Source-Control-Tag: HEAD
+Jahia-Source-Folders: /Users/ksagnard/GitProjects/jahia-qa-data/template
+ s/template_test_cloudimage
+Jahia-Static-Resources: /css,/icons,/images,/img,/javascript
+Provide-Capability: com.jahia.modules.dependencies;moduleIdentifier=temp
+ late_test_cloudimage;moduleVersion:Version="1.0.0.SNAPSHOT",com.jahia.m
+ odules.dependencies;moduleIdentifier=template_test_cloudimage;moduleVer
+ sion:Version="1.0.0.SNAPSHOT"
+Require-Capability: com.jahia.services.content;filter:="(nodetypes=jmix:
+ theme)",com.jahia.services.content;filter:="(nodetypes=jnt:contentFolde
+ r)",com.jahia.services.content;filter:="(nodetypes=jnt:contentList)",co
+ m.jahia.services.content;filter:="(nodetypes=jnt:contentTemplate)",com.
+ jahia.services.content;filter:="(nodetypes=jnt:folder)",com.jahia.servi
+ ces.content;filter:="(nodetypes=jnt:mainResourceDisplay)",com.jahia.ser
+ vices.content;filter:="(nodetypes=jnt:module)",com.jahia.services.conte
+ nt;filter:="(nodetypes=jnt:modules)",com.jahia.services.content;filter:
+ ="(nodetypes=jnt:page)",com.jahia.services.content;filter:="(nodetypes=
+ jnt:pageTemplate)",com.jahia.services.content;filter:="(nodetypes=jnt:p
+ ortletFolder)",com.jahia.services.content;filter:="(nodetypes=jnt:templ
+ ate)",com.jahia.services.content;filter:="(nodetypes=jnt:templatesFolde
+ r)",com.jahia.services.content;filter:="(nodetypes=jnt:translation)",co
+ m.jahia.services.content;filter:="(nodetypes=mix:title)",com.jahia.modu
+ les.dependencies;filter:="(moduleIdentifier=default)"
+Specification-Title: template_test_cloudimage
+Specification-Vendor: Jahia Solutions Group SA
+Specification-Version: 1.0.0-SNAPSHOT
+Tool: Bnd-6.1.0.202111221555
