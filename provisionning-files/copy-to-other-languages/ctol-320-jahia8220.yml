@@ -40,7 +40,8 @@
 - if: org.jahia.osgi.BundleUtils.getBundleBySymbolicName('content-editor',null) != null
   do:
     - uninstallBundle: 'mvn:org.jahia.modules/content-editor/3.6.0'
-
+    
+# jcontent-3.5.0 has a dependency to graphql-3.5.0
 - installBundle:
   - 'mvn:org.jahia.modules/graphql-dxm-provider'
   - 'mvn:org.jahia.modules/jcontent'
