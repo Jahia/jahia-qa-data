@@ -1,0 +1,24 @@
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2942/@id=jahia_staging_releases-2942'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- installBundle:
+    - 'mvn:org.jahia.modules/javascript-modules-engine/1.2.0'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# new javascript modules engine's test module and hydrogen sample, used for cypress tests
+- installBundle:
+    - 'js:mvn:org.jahia.test/javascript-modules-engine-test-module/1.2.0/tgz'
+    - 'js:mvn:org.jahia.samples/javascript-modules-samples-hydrogen/1.2.0/tgz'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# install other dependencies
+- installBundle:
+    - 'mvn:org.jahia.samples/simple-osgi-service/1.1.0'
+    - 'mvn:org.jahia.modules/legacy-default-components/1.0.0'
+    - 'mvn:org.jahia.modules/calendar/3.2.0'
+    - 'mvn:org.jahia.modules/event/4.0.1'
+  autoStart: true
+  uninstallPreviousVersion: true
