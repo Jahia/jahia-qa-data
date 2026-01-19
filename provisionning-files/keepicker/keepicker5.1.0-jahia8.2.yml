@@ -1,0 +1,37 @@
+# Applicable to:
+#   - Jahia 8.2.1.0
+#   - Jahia 8.2.2.X
+#   - Jahia 8.2.3.0-SNAPSHOT
+
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/enterprise/@id=jahia-enterprise@snapshots"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2945/@id=jahia_staging_releases-2945'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+# keepicker release
+- installBundle:
+    - 'mvn:org.jahia.modules/keepicker/5.1.0'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# keepicker test module
+- installBundle:
+    - 'mvn:org.jahia.test/keepicker-test-module'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# aux dependencies
+- installBundle:
+    - 'mvn:org.jahia.modules/graphql-dxm-provider/3.5.1'
+    - 'mvn:org.jahia.modules/javascript-modules-engine/1.1.0'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# jcontent depends on graphql-dxm-provider, thus it should be installed afterwards
+- installBundle:
+    - 'mvn:org.jahia.modules/jcontent/3.5.0'
+  autoStart: true
+  uninstallPreviousVersion: true
