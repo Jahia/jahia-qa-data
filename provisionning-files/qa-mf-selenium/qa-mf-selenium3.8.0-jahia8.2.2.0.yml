@@ -18,6 +18,7 @@
     - 'mvn:org.jahia.modules/remotepublish/10.2.0'
     - 'mvn:org.jahia.modules/event/4.0.1'
     - 'mvn:org.jahia.modules/skins/8.2.0'
+    - 'mvn:org.jahia.modules/jcontent/3.4.1'
     - 'mvn:org.jahia.modules/default-skins/8.2.0'
   autoStart: true
   uninstallPreviousVersion: true

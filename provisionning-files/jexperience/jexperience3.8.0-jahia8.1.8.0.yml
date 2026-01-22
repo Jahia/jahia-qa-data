@@ -1,7 +1,7 @@
 - installBundle:
     - 'mvn:org.jahia.modules/content-editor/4.11.0'
     - 'mvn:org.jahia.modules/graphql-dxm-provider/2.22.0'
-    - 'mvn:org.jahia.modules/jcontent/2.18.0'
+    - 'mvn:org.jahia.modules/jcontent/2.20.0'
     - 'mvn:org.jahia.modules/jahia-ui-root/1.10.0'
     - 'mvn:org.jahia.modules/press/3.1.0'
     - 'mvn:org.jahia.modules/person/3.2.0'
