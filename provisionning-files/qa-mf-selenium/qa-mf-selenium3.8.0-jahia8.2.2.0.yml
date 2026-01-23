@@ -1,9 +1,5 @@
 
 
-- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_marketing_factory_staging_releases-1130"
-  username: "NEXUS_USERNAME"
-  password: "NEXUS_PASSWORD"
-
 # Installation of the modules with a fixed version
 # Usually dependencies not directly related with jexperience
 # This section is divided in 3 blocks to make debugging easier
@@ -38,13 +34,15 @@
 - addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/marketing-factory-group@id=marketing-factory-group@releases"
   username: "NEXUS_USERNAME"
   password: "NEXUS_PASSWORD"
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_marketing_factory_staging_releases-1130"
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
 
 # Installation of the modules that are actually tested
 - installBundle:
-    - 'mvn:org.jahia.modules/server-availability-manager/3.3.0'
+    - 'mvn:org.jahia.modules/server-availability-manager/3.4.1'
     - 'mvn:org.jahia.modules/jexperience/3.8.0'
     - 'mvn:org.jahia.modules/jexperience-forms-bridge'
-    - 'mvn:org.jahia.modules/jexperience-data-generator'
   autoStart: true
   uninstallPreviousVersion: true
 
