@@ -19,7 +19,7 @@
 # Usually dependencies not directly related with jexperience
 # This section is divided in 3 blocks to make debugging easier
 - installBundle:
-    - 'mvn:org.jahia.modules/content-editor/4.11.0'
+    - 'mvn:org.jahia.modules/content-editor/4.16.0'
     - 'mvn:org.jahia.modules/jahia-ui-root/1.10.0'
     - 'mvn:org.jahia.modules/jcontent/2.20.0'
     - 'mvn:org.jahia.modules/jahia-csrf-guard/3.4.0'
@@ -43,7 +43,7 @@
 
 # Installation of the modules are are actually testing
 - installBundle:
-    - 'mvn:org.jahia.modules/server-availability-manager/3.3.0'
+    - 'mvn:org.jahia.modules/server-availability-manager/2.8.1'
     - 'mvn:org.jahia.modules/jexperience/3.8.0'
     - 'mvn:org.jahia.modules/jexperience-forms-bridge/3.1.0-SNAPSHOT'
     - 'mvn:org.jahia.modules/jexperience-data-generator/3.5.0-SNAPSHOT'
