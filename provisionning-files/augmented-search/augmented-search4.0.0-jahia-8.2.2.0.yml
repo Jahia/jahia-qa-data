@@ -1,3 +1,5 @@
+# We must use a profile from here https://github.com/Jahia/augmented-search/blob/master/tests/provisioning/pom.xml#L55-L68 (either ghcr.io/jahia/jahia-ee-dev:8-SNAPSHOT or jahia/jahia-ee:8) as jahia-image value
+# Please update those profiles if needed
 # Install and start bundles for Augmented Search
 - addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/enterprise/@id=jahia-enterprise@snapshots"
   username: "NEXUS_USERNAME"
