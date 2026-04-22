@@ -1,10 +1,10 @@
 - addMavenRepository: 'https://store.jahia.com/nexus/content/repositories/jahia-public-app-store@id=JahiaStore'
 - addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/public/@snapshots@id=JahiaSnapshot'
-- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2974@id=JahiaStagingReleases'
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-2974/@id=jahia_staging_releases-2974'
   username: "NEXUS_USERNAME"
   password: "NEXUS_PASSWORD"
 
-# This modules were added during the switch from using jahia-discovery to jahia-ee
+# These modules were added during the switch from using jahia-discovery to jahia-ee
 - installBundle:
   - 'mvn:org.jahia.modules/legacy-default-components'
   - 'mvn:org.jahia.modules/press'
