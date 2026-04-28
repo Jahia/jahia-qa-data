@@ -1,0 +1,53 @@
+# Install and start bundles for Augmented Search
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/enterprise/@id=jahia-enterprise@snapshots"
+  username: ${env:NEXUS_USERNAME}
+  password: ${env:NEXUS_PASSWORD}
+
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/groups/internal/@id=jahia-internal"
+  username: ${env:NEXUS_USERNAME}
+  password: ${env:NEXUS_PASSWORD}
+
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/augmented_search_staging_releases-1096"
+  username: ${env:NEXUS_USERNAME}
+  password: ${env:NEXUS_PASSWORD}
+
+- installOrUpgradeBundle:
+  - 'mvn:org.jahia.modules/elasticsearch-connector/4.1.0'
+  - 'mvn:org.jahia.modules/graphql-dxm-provider/3.6.0'
+  - 'mvn:org.jahia.modules/augmented-search/4.1.0'
+  - 'mvn:org.jahia.modules/augmented-search-ui/4.0.0'
+  autoStart: true
+  uninstallPreviousVersion: false
+
+- installOrUpgradeBundle:
+  - 'mvn:org.jahia.modules/legacy-default-components/RELEASE'
+  - 'mvn:org.jahia.modules/googleAnalytics/RELEASE'
+  - 'mvn:org.jahia.modules/person/RELEASE'
+  - 'mvn:org.jahia.modules/bootstrap3-components/RELEASE'
+  - 'mvn:org.jahia.modules/location/RELEASE'
+  - 'mvn:org.jahia.modules/skins/RELEASE'
+  - 'mvn:org.jahia.modules/faq/RELEASE'
+  - 'mvn:org.jahia.modules/topstories/RELEASE'
+  - 'mvn:org.jahia.modules/grid/RELEASE'
+  - 'mvn:org.jahia.modules/contact/RELEASE'
+  - 'mvn:org.jahia.modules/rating/RELEASE'
+  - 'mvn:org.jahia.modules/calendar/RELEASE'
+  - 'mvn:org.jahia.modules/bookmarks/RELEASE'
+  - 'mvn:org.jahia.modules/socialsharing/RELEASE'
+  - 'mvn:org.jahia.modules/default-skins/RELEASE'
+  - 'mvn:org.jahia.modules/press/RELEASE'
+  - 'mvn:org.jahia.modules/bootstrap3-core/RELEASE'
+  - 'mvn:org.jahia.modules/news/RELEASE'
+  - 'mvn:org.jahia.modules/font-awesome/RELEASE'
+  - 'mvn:org.jahia.modules/article/RELEASE'
+  - 'mvn:org.jahia.modules/event/RELEASE'
+  - 'mvn:org.jahia.modules/dx-base-demo-core/RELEASE'
+  - 'mvn:org.jahia.modules/dx-base-demo-components/RELEASE'
+  - 'mvn:org.jahia.modules/dx-base-demo-templates/RELEASE'
+  - 'mvn:org.jahia.modules/digitall/RELEASE'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# Import the Digitall site
+- import: "jar:mvn:org.jahia.modules/digitall/RELEASE/zip/import!/users.zip"
+- importSite: "jar:mvn:org.jahia.modules/digitall/RELEASE/zip/import!/Digitall.zip"
