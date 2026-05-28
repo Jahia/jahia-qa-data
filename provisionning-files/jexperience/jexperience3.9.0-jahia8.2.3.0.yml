@@ -38,7 +38,7 @@
   username: "NEXUS_USERNAME"
   password: "NEXUS_PASSWORD"
 
-- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_marketing_factory_staging_releases-1133"
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_marketing_factory_staging_releases-1133/@id=jexp-staging"
   username: "NEXUS_USERNAME"
   password: "NEXUS_PASSWORD"
 
