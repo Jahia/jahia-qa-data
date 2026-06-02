@@ -31,6 +31,7 @@
     - 'mvn:org.jahia.modules/jcontent/3.4.1'
     - 'mvn:org.jahia.modules/richtext-ckeditor5/1.0.1'
     - 'mvn:org.jahia.test/test-ckeditor5-config'
+    - 'mvn:org.jahia.test/test-ckeditor5-templates'
   autoStart: true
   uninstallPreviousVersion: true
 
