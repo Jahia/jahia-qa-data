@@ -1,0 +1,24 @@
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/public/@snapshots@noreleases@id=JahiaPublicSnapshots'
+
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/groups/internal/@id=jahia-internal'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-3005@id=staging-repository'
+  username: "NEXUS_USERNAME"
+  password: "NEXUS_PASSWORD"
+
+- installOrUpgradeBundle: "mvn:org.jahia.modules/javascript-modules-engine/1.2.0"
+
+- installOrUpgradeBundle:
+    - 'mvn:org.jahia.modules/graphql-dxm-provider/3.6.0'
+    - 'mvn:org.jahia.modules/content-integrity/3.34'
+    - 'mvn:org.jahia.modules/jcontent/3.6.1'
+    - 'mvn:org.jahia.modules/formidable-engine/0.3.0'
+    - 'js:mvn:org.jahia.modules/formidable-elements/0.3.0/tgz'
+    - 'mvn:org.jahia.test/formidable-test-module-samples-java/0.3.0'
+    - 'js:mvn:org.jahia.test/formidable-test-module-samples-tsx/0.3.0/tgz'
+    - 'mvn:org.jahia.test/formidable-test-module-templateset-jsp/0.3.0'
+    - 'js:mvn:org.jahia.test/formidable-test-module-templateset-tsx/0.3.0/tgz'
+  autoStart: true
+  uninstallPreviousVersion: true
