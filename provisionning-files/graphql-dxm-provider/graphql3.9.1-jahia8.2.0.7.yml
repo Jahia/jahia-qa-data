@@ -7,7 +7,7 @@
   password: "NEXUS_PASSWORD"
 
 # replace URL by staging repository on Nexus
-- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-3060@id=jahia_staging_releases-3060"
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia_staging_releases-3060/@id=jahia_staging_releases-3060"
   username: "NEXUS_USERNAME"
   password: "NEXUS_PASSWORD"
 
